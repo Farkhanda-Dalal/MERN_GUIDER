@@ -62,6 +62,7 @@ dotenv loads environment variables from a .env file into process.env. It helps k
 ```
 npm install dotenv
 ```
+### .env should always be placed in backend folder
 
 ## UPDATE package.json FILE:
 ADD THIS TO SCRIPTS:
@@ -77,4 +78,29 @@ UPDATE MAIN:
 SET TYPE TO MODULE
 ```
 "type" : "module"
+```
+
+## package.json eg:
+```
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
+  }
+}
+
 ```
